@@ -8,3 +8,7 @@ with open('reviews.txt', 'r') as f:
         if count % 1000 == 0:
             print(len(data))
 print('档案读取完毕，共有', len(data),'笔资料')
+sum_len = 0
+for review in data:
+    sum_len += len(review)
+print('平均长度为', sum_len/len(data))
